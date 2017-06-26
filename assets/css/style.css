@@ -1,1 +1,7 @@
+.jumbotron {
+    background-color: yellow;
+}
 
+h1, p, button {
+    font-family: 'Days One', sans-serif;
+}
