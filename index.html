@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GifTastic</title>
+	
+    <!-- Added link to the jQuery Library -->
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+	<!-- Added a link to reset stylesheet -->
+	<!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css">-->
+
+	<!-- Added a link to Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Added a link to css stylesheet -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Added a link to javascript file -->
+    <script src="assets/javascript/app.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class = "jumbotron">
+            <h1>GifTastic!</h1>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="row">
+                    <div id="animalBtns" class="col-sm-8">
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="searchTerm">Add an animal:</label>
+                            <input type="text" class="form-control" id="searchTerm" aria-describedby="searchTerm" placeholder="">
+                        </div>
+                        <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div id="gifs" class="panel-body">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
