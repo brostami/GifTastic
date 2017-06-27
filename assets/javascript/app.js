@@ -3,14 +3,14 @@ var animals = ["cat", "dog", "squirrel", "rabbit", "fox", "gopher", "hamster", "
 
 loadBtns();
 
-// Create initial array buttons
+// Function to create initial array buttons
 function loadBtns() {
     for (var i = 0; i < animals.length; i++) {
         createBtn(animals[i]);
     }
 }
 
-// Create buttons
+// Function to create buttons
 function createBtn(animal) {
     var button = $("<button style='margin: 0 5px 5px 0;'>");
     button.addClass("btn btn-primary animalBtn");
@@ -19,7 +19,7 @@ function createBtn(animal) {
     $("#animalBtns").append(button);
 }
 
-// Add click event listener to animal buttons to get gifs from giphy api and display in #gifs div
+// Click event handler to animal buttons to get gifs from giphy api and display in #gifs div
 $("#animalBtns").on("click", ".animalBtn", function() {
     $("#gifs").empty();
     var clickedAnimal = $(this).text();
@@ -45,6 +45,7 @@ $("#animalBtns").on("click", ".animalBtn", function() {
     });
 });
 
+// Click event handler for submit button to add new animal buttons to #newAnimal div
 $("#submitBtn").on("click", function(event) {
     event.preventDefault();
     var newAnimal = $("#newAnimal").val().trim();
@@ -53,6 +54,7 @@ $("#submitBtn").on("click", function(event) {
     createBtn(newAnimal);
 });
 
+// Click event handler to pause and play gifs
 $("#gifs").on("click", ".gif", function() {
     var state = $(this).attr("data-state");
     if (state === "still") {
